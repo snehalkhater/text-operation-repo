@@ -19,5 +19,34 @@
     </div>
     <p id="result">Result will be displayed here....</p>
     </div>
+
+      <script>
+        const inputElement = document.getElementById('inputText');
+        const ReverseText = () => {
+            result.innerText = `Reversed: ${inputElement.value.split('').reverse().join('')}`;
+        };
+
+        const UpperCase = () => {
+            result.innerText = `Uppercase: ${inputElement.value.toUpperCase()}`;
+        };
+
+        const LowerCase = () => {
+            result.innerText = `Lowercase: ${inputElement.value.toLowerCase()}`;
+        };
+
+        const WordCount = () => {
+            const words = inputElement.value.trim().split(/\s+/);
+            result.innerText = `Word Count: ${words.length}`;
+        };
+
+        const textLength = () => {
+            result.innerText = `Length: ${inputElement.value.length}`;
+        };
+        const ClearText = () => {
+            inputElement.value = "";
+            result.innerText = "Result will be displayed here";
+        };
+
+    </script>
 </body>
 </html>
